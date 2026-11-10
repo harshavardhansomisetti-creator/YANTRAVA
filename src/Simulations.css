@@ -1,0 +1,163 @@
+
+.simulations-page {
+  padding: 34px;
+  color: #edf2ff;
+  min-height: 100%;
+}
+
+.simulations-heading h1 {
+  font-size: 32px;
+  margin: 12px 0;
+}
+
+.simulations-heading p {
+  color: #929db4;
+  max-width: 620px;
+  line-height: 1.7;
+}
+
+.simulation-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 28px 0 20px;
+  color: #aebbd0;
+  font-size: 13px;
+}
+
+.simulation-board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.simulation-board-card {
+  background: #111b2c;
+  border: 1px solid #26354b;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.simulation-board-card:hover {
+  transform: translateY(-5px);
+  border-color: #5689ef;
+}
+
+.board-visual {
+  height: 175px;
+  margin: 16px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #52627b;
+  background-color: #172c36;
+}
+
+.board-visual.arduino {
+  background: linear-gradient(135deg, #164d57, #102b36);
+}
+
+.board-visual.esp32 {
+  background: linear-gradient(135deg, #26374b, #121e32);
+}
+
+.board-visual.stm32 {
+  background: linear-gradient(135deg, #244a3b, #142d2a);
+}
+
+.board-chip {
+  background: #101722;
+  border: 2px solid #75849a;
+  padding: 18px 12px;
+  border-radius: 5px;
+  color: #dce8ff;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.board-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #a9c3df;
+}
+
+.board-pins {
+  position: absolute;
+  bottom: 13px;
+  display: flex;
+  gap: 7px;
+}
+
+.board-pins span {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: #c3a66d;
+}
+
+.board-card-content {
+  padding: 5px 20px 20px;
+}
+
+.board-type {
+  color: #7198e7;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.board-card-content h2 {
+  font-size: 19px;
+  margin: 10px 0;
+}
+
+.board-card-content p {
+  color: #929db4;
+  font-size: 13px;
+  line-height: 1.6;
+  min-height: 62px;
+}
+
+.board-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 16px 0 20px;
+}
+
+.board-tags span {
+  font-size: 10px;
+  color: #b8c9e7;
+  background: #202e43;
+  padding: 6px 9px;
+  border-radius: 5px;
+}
+
+.board-select-btn {
+  width: 100%;
+  border: 1px solid #4779d6;
+  background: #2454a0;
+  color: white;
+  padding: 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.board-select-btn:hover {
+  background: #3169c2;
+}
+
+@media (max-width: 600px) {
+  .simulations-page {
+    padding: 20px;
+  }
+}

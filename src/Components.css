@@ -1,0 +1,623 @@
+
+.components-page {
+  padding: 40px;
+  max-width: 1400px;
+  margin: auto;
+  color: #172b3a;
+}
+
+/* HEADER */
+
+.library-header {
+  padding: 45px;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #14283a, #193b4b);
+  color: white;
+}
+
+.eyebrow {
+  color: #51d6ae;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.library-header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 38px;
+  margin-top: 15px;
+}
+
+.library-header > p:not(.eyebrow) {
+  color: #b7c6d2;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.library-header input {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  margin-top: 28px;
+  padding: 15px 17px;
+  border: 1px solid #506879;
+  border-radius: 9px;
+  background: #243e50;
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+.library-header input:focus {
+  border-color: #51d6ae;
+}
+
+.library-header input::placeholder {
+  color: #a9bac7;
+}
+
+/* CATEGORY FILTERS */
+
+.component-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0;
+}
+
+.component-categories button {
+  padding: 10px 16px;
+  border: 1px solid #dce5e9;
+  border-radius: 8px;
+  background: white;
+  color: #344b5c;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.component-categories button:hover,
+.component-categories button.active {
+  background: #193b4b;
+  border-color: #193b4b;
+  color: white;
+}
+
+/* COMPONENT GRID */
+
+.component-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.component-card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e5ebef;
+  border-radius: 14px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.component-card:hover {
+  transform: translateY(-5px);
+  border-color: #51c9a7;
+  box-shadow: 0 12px 28px rgba(20, 45, 60, 0.10);
+}
+
+/* IMAGE AREA */
+
+.component-image {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #edf5f5, #e2eeee);
+}
+
+.component-image span {
+  font-size: 55px;
+}
+
+/* COMPONENT DETAILS */
+
+.component-info {
+  padding: 20px;
+}
+
+.component-info p {
+  color: #1eaa83;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.component-info h2 {
+  margin-top: 9px;
+  color: #172b3a;
+  font-size: 19px;
+}
+
+.component-info > span {
+  display: block;
+  margin-top: 17px;
+  color: #168b6d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.no-results {
+  margin-top: 35px;
+  text-align: center;
+  color: #7b8793;
+}
+
+/* 3D VIEWER */
+
+.viewer {
+  width: 100%;
+  height: 420px;
+  background: #111827;
+  border: 1px solid #263449;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.viewer:active {
+  cursor: grabbing;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .component-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .components-page {
+    padding: 20px;
+  }
+
+  .library-header {
+    padding: 27px 22px;
+  }
+
+  .library-header h1 {
+    font-size: 29px;
+  }
+
+  .component-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.back-button {
+  padding: 11px 17px;
+  background: #193b4b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.detail-header {
+  margin-bottom: 25px;
+}
+
+.detail-header p {
+  color: #159b7b;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.detail-header h1 {
+  color: #172b3a;
+  font-size: 32px;
+  margin: 12px 0;
+}
+
+.detail-header span {
+  color: #71808d;
+  font-size: 13px;
+}
+
+.component-detail-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.detail-viewer,
+.detail-information {
+  padding: 22px;
+  background: white;
+  border: 1px solid #e5ebef;
+  border-radius: 14px;
+}
+
+.detail-viewer h2,
+.detail-information h2 {
+  color: #172b3a;
+  font-size: 19px;
+  margin-bottom: 18px;
+}
+
+.detail-viewer > p {
+  color: #71808d;
+  font-size: 11px;
+  margin-top: 12px;
+}
+
+.info-section {
+  padding: 17px 0;
+  border-top: 1px solid #edf0f2;
+}
+
+.info-section h3 {
+  color: #168b6d;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.info-section p {
+  color: #657482;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 850px) {
+  .component-detail-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Component details - fixed height layout */
+.component-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+  height: 480px;
+  min-height: 0;
+}
+
+.detail-viewer {
+  height: 480px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.detail-viewer .viewer {
+  height: 100%;
+}
+
+.detail-information {
+  height: 480px;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding-right: 12px;
+}
+
+/* Smooth scrollbar */
+.detail-information::-webkit-scrollbar {
+  width: 6px;
+}
+
+.detail-information::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.detail-information::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .component-detail-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .detail-viewer {
+    height: 350px;
+  }
+
+  .detail-information {
+    height: 350px;
+  }
+}
+
+
+.viewer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.viewer-toolbar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+
+.viewer-toolbar button {
+  padding: 8px 12px;
+  background: #172536;
+  color: white;
+  border: 1px solid #536579;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.viewer-toolbar button:hover {
+  background: #294762;
+}
+
+.viewer:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  border-radius: 0;
+}
+
+
+/* YANTRAVA branding */
+.brand-area {
+  padding: 0 0 25px;
+}
+
+.brand {
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.brand span {
+  color: #51d6ae;
+}
+
+.nav-label {
+  color: #8495a3;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+.nav-icon {
+  display: inline-block;
+  width: 27px;
+  font-size: 17px;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Keep the application inside the screen */
+.app {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  min-width: 0;
+  min-height: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Components-only scrolling */
+.main-components {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.components-scroll-area {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #aab8bd transparent;
+}
+
+.components-scroll-area::-webkit-scrollbar {
+  width: 7px;
+}
+
+.components-scroll-area::-webkit-scrollbar-thumb {
+  background: #aab8bd;
+  border-radius: 10px;
+}
+
+.components-scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+
+/* Components library scroll layout */
+.components-page {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  overflow: visible;
+}
+
+
+/* FIXED APP WINDOW */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* SIDEBAR FIXED */
+.sidebar {
+  flex-shrink: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* MAIN WORKSPACE */
+.main {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* TOPBAR FIXED */
+.topbar {
+  flex-shrink: 0;
+}
+
+/* COMPONENTS INTERNAL SCROLL */
+.main-components {
+  overflow: hidden;
+}
+
+.components-scroll-area {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #aab8bd transparent;
+}
+
+.components-scroll-area::-webkit-scrollbar {
+  width: 7px;
+}
+
+.components-scroll-area::-webkit-scrollbar-thumb {
+  background: #aab8bd;
+  border-radius: 10px;
+}
+
+/* COMPONENT CONTENT */
+.components-page {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+
+/* YANTRAVA COMPONENT LIBRARY - COMPACT LAYOUT */
+
+.components-page {
+  width: 100%;
+  max-width: 1600px;
+  padding: 24px 30px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Wider hero with less empty space */
+.library-header {
+  padding: 30px 38px;
+  min-height: auto;
+}
+
+.library-header h1 {
+  font-size: 34px;
+  margin-top: 10px;
+}
+
+.library-header input {
+  max-width: 650px;
+  margin-top: 22px;
+}
+
+/* Category buttons */
+.component-categories {
+  gap: 9px;
+  margin: 20px 0;
+}
+
+.component-categories button {
+  padding: 11px 15px;
+}
+
+/* Wider component cards */
+.component-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+.component-card {
+  min-width: 0;
+}
+
+.component-image {
+  height: 155px;
+}
+
+.component-info {
+  padding: 17px;
+}
+
+/* Responsive */
+@media (min-width: 1450px) {
+  .component-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .component-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .components-page {
+    padding: 16px;
+  }
+
+  .library-header {
+    padding: 25px 20px;
+  }
+
+  .component-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
